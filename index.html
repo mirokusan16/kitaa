@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>I Have Something</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="screen" id="screen1">
+        <h1>I Have Something</h1>
+        <button onclick="showPolaroid()">Open</button>
+    </div>
+
+    <div class="screen hidden" id="screen2">
+        <audio autoplay loop>
+            <source src="music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="polaroid-gallery">
+            <div class="polaroid"><img src="img1.jpeg"><p>Memory 1</p></div>
+            <div class="polaroid"><img src="img2.jpeg"><p>Memory 2</p></div>
+            <div class="polaroid"><img src="img3.jpeg"><p>Memory 3</p></div>
+            <div class="polaroid"><img src="img4.jpeg"><p>Memory 4</p></div>
+            <div class="polaroid"><img src="img5.jpeg"><p>Memory 5</p></div>
+        </div>
+    </div>
+
+    <script>
+        function showPolaroid() {
+            document.getElementById("screen1").classList.add("hidden");
+            document.getElementById("screen2").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
